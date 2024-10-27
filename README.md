@@ -13,8 +13,7 @@ PS: don't point out the bad code, will fix someday. still could likely improve c
 
 # Installation
 ## Windows
-Download, unzip and run dds.exe
-
+Download, unzip and run dds.exe, or compile it yourself
 ## Linux
 Download, allow executing file as program in exe's properties, launch in preferred terminal
 ![image](https://github.com/user-attachments/assets/32034220-569b-43b3-8931-c0d841a69071)
