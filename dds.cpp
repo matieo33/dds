@@ -10,7 +10,7 @@ const std::filesystem::path outputFolder = "output";
 
 std::string genCmd(const std::filesystem::path filePath) {    
     #if __linux__
-    std::string command = "magick " + inputFolder.string() + "/'" + filePath.filename().string() + "' " + outputFolder.string() + "/'" + filePath.filename().stem().string() + ".dds'"
+    std::string command = "magick " + inputFolder.string() + "/'" + filePath.filename().string() + "' " + outputFolder.string() + "/'" + filePath.filename().stem().string() + ".dds'";
     #elif _WIN32
     std::string command = "magick \"" + inputFolder.string() + "\\" + filePath.filename().string() + "\" \"" +
                             outputFolder.string() + "\\" + filePath.filename().stem().string() + ".dds\"";
