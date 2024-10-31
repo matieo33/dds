@@ -13,7 +13,7 @@ const std::filesystem::path outputFolder = "output";
 std::string genCmd(const std::filesystem::path filePath) {
     std::string command;    
     std::string fileExt = filePath.extension().string();
-    const std::set<std::string> supportedExt = {".png", ".jpg", ".jpeg", ".bmp", ".tga", ""};
+    const std::set<std::string> supportedExt = {".png", ".jpg", ".jpeg", ".bmp", ".tga", ".psd"};
 
     #if __linux__
     if (supportedExt.find(fileExt) != supportedExt.end()) { // Is supported extension (to dds)
@@ -75,13 +75,14 @@ int convert() {
 
     std::cout << "\nConverted all files in " << std::setprecision(5) << duration.count() << " seconds." << "\n";
 
-    std::cout << "Press Enter to exit...";
-    std::cin.ignore();
-
+    return 0;
 }
 
 int main() {
     convert();
+
+    std::cout << "Press Enter to exit...";
+    std::cin.ignore();
 
     return 0;
 }
